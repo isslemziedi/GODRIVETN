@@ -3,4 +3,6 @@
     <string name="month_prompt">Month</string>
     <string name="year_prompt">Year</string>
     <string name="image_content_desc">Image description goes here</string>
+
+    <string name="client_id">17517581034-tllb55neae0lblccgqlg8dq2fges137b.apps.googleusercontent.com</string>
 </resources>

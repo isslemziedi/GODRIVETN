@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -41,30 +42,14 @@
         android:textColor="@color/grey"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/usernameEditText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/signupInstructionsTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/rounded_edittext"
-        android:hint="Username"
-        android:inputType="text"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:drawableStart="@drawable/driver"
-        android:drawablePadding="10dp"/>
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/usernameEditText"
+        android:layout_below="@id/signupInstructionsTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rounded_edittext"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -101,7 +86,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -177,9 +162,12 @@
             android:layout_marginStart="8dp"
             android:stateListAnimator="@null"
             android:elevation="0dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            tools:ignore="MissingClass" />
 
 
     </LinearLayout>
 
 </RelativeLayout>
+
+

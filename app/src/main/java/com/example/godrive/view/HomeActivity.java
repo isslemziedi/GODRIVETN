@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private Button reservationBtn;
     private Button carDescriptionBtn;
+    private Button profileUserBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
 
         reservationBtn = findViewById(R.id.reservationButton);
         carDescriptionBtn = findViewById(R.id.carDescButton);
+        profileUserBtn = findViewById(R.id.profileButton);
 
         reservationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,21 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+        profileUserBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
 
+            }
+        });
+
+        carDescriptionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, CarDescriptionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

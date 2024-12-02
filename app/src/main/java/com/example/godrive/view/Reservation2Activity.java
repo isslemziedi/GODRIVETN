@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ import com.example.godrive.R;
 public class Reservation2Activity extends AppCompatActivity {
 
     private Button reservationStep2btn;
+    private ImageView GoBackBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +31,20 @@ public class Reservation2Activity extends AppCompatActivity {
         });
 
         reservationStep2btn = findViewById(R.id.continue2Button);
+        GoBackBtn = findViewById(R.id.imageViewGoBack);
+
         reservationStep2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Reservation2Activity.this, Reservation3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        GoBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Reservation2Activity.this, ReservationActivity.class);
                 startActivity(intent);
             }
         });

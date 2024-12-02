@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class CreditCardActivity extends AppCompatActivity {
     private Spinner spinnerYear;
     private Button confirmBtn;
 
+    private ImageView GoBackBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +42,15 @@ public class CreditCardActivity extends AppCompatActivity {
         spinnerMonth = findViewById(R.id.spinner_month);
         spinnerYear = findViewById(R.id.spinner_year);
         confirmBtn = findViewById(R.id.confirmBooking4Button);
+        GoBackBtn = findViewById(R.id.imageViewGoBack);
+
+        GoBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreditCardActivity.this, Reservation3Activity.class);
+                startActivity(intent);
+            }
+        });
 
         confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
